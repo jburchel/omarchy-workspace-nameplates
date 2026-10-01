@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "io.github.jburchel.workspace-nameplates",
   "name": "Workspace Nameplates",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Jim Burchel",
   "license": "MIT",
   "description": "Replaces the bar's workspace numbers in place: each workspace keeps its number and gains a name and icon, edited by double-clicking it",

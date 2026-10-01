@@ -32,39 +32,44 @@ first match. Double-click an icon to pick it and save in one step.
 
 ## Install
 
+Review the source first. Like every Omarchy plugin, it runs unsandboxed
+inside `omarchy-shell`. Then:
+
 ```bash
-git clone https://github.com/jburchel/omarchy-workspace-nameplates \
-  ~/.config/omarchy/plugins/io.github.jburchel.workspace-nameplates
+omarchy plugin add https://github.com/jburchel/omarchy-workspace-nameplates.git
 ```
 
-Then, in `~/.config/omarchy/shell.json`, replace the stock widget in
-`bar.layout.left`:
+When asked, accept the prompt to enable the plugin and choose the **left**
+section, which is preselected. Then put it first in that section and turn off
+the stock numbers, so it sits in the stock widget's place:
 
-```json
-{ "id": "omarchy.workspaces" }
+```bash
+omarchy plugin enable io.github.jburchel.workspace-nameplates --section left --index 0
+omarchy plugin disable omarchy.workspaces
 ```
 
-with
+Then double-click any workspace to give it a name and an icon.
 
-```json
-{ "id": "io.github.jburchel.workspace-nameplates" }
+## Update
+
+```bash
+omarchy plugin update io.github.jburchel.workspace-nameplates
 ```
-
-The bar reloads on save. If the widget does not show up, run
-`omarchy restart shell`.
 
 ## Remove
 
-1. In `~/.config/omarchy/shell.json`, change the entry's id back to
-   `omarchy.workspaces`. You can also delete its `format` and `workspaces`
-   keys, which the stock widget ignores.
-2. Delete the plugin folder:
+Put the stock widget back, then remove the plugin:
 
-   ```bash
-   rm -rf ~/.config/omarchy/plugins/io.github.jburchel.workspace-nameplates
-   ```
+```bash
+omarchy plugin enable omarchy.workspaces --section left --index 0
+omarchy plugin remove io.github.jburchel.workspace-nameplates
+```
 
-3. If you added the optional keybinding, remove it from `bindings.lua`.
+If you added the optional keybinding, remove it from `bindings.lua`.
+
+> **Note:** Disabling or removing the widget deletes its entry in
+> `shell.json`, including the names and icons you set. Copy the entry first
+> if you want to keep them.
 
 ## Requirements
 
@@ -109,7 +114,9 @@ o.bind("SUPER + CTRL + N", "Rename workspace", "omarchy-shell io.github.jburchel
 ```
 
 `edit <n>` opens the editor for workspace *n* on the focused monitor, and
-`edit 0` opens it for the current workspace.
+`edit 0` opens it for the current workspace. The shell registers this IPC
+command only at startup, so run `omarchy restart shell` once after installing
+if you want to use it. Double-click editing works without a restart.
 
 ## Tests
 
