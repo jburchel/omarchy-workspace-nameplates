@@ -53,6 +53,28 @@ with
 The bar reloads on save. If the widget does not show up, run
 `omarchy restart shell`.
 
+## Remove
+
+1. In `~/.config/omarchy/shell.json`, change the entry's id back to
+   `omarchy.workspaces`. You can also delete its `format` and `workspaces`
+   keys, which the stock widget ignores.
+2. Delete the plugin folder:
+
+   ```bash
+   rm -rf ~/.config/omarchy/plugins/io.github.jburchel.workspace-nameplates
+   ```
+
+3. If you added the optional keybinding, remove it from `bindings.lua`.
+
+## Requirements
+
+- Omarchy 4 (Quattro shell). Tested on Omarchy 4.0.4 with Hyprland 0.56.
+- A Nerd Font for the bar. Omarchy's default, JetBrainsMono Nerd Font, works.
+
+There are no other dependencies. The plugin makes no network requests, needs
+no sudo and has no install hooks. It writes only its own entry in
+`~/.config/omarchy/shell.json`, and only when you press Save in the editor.
+
 ## Configuration
 
 The editor writes everything for you. If you prefer, you can edit the same
@@ -88,6 +110,12 @@ o.bind("SUPER + CTRL + N", "Rename workspace", "omarchy-shell io.github.jburchel
 
 `edit <n>` opens the editor for workspace *n* on the focused monitor, and
 `edit 0` opens it for the current workspace.
+
+## Tests
+
+```bash
+node tests/qml-text.test.js   # every Text item renders plain text
+```
 
 ## Credits
 
