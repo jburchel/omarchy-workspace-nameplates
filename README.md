@@ -77,7 +77,7 @@ If you added the optional keybinding, remove it from `bindings.lua`.
 - A Nerd Font for the bar. Omarchy's default, JetBrainsMono Nerd Font, works.
 
 There are no other dependencies. The plugin makes no network requests, needs
-no sudo and has no install hooks. It writes only its own entry in
+no administrator rights and has no install hooks. It writes only its own entry in
 `~/.config/omarchy/shell.json`, and only when you press Save in the editor.
 
 ## Configuration
