@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "id": "io.github.jburchel.workspace-nameplates",
-  "name": "Workspace Nameplates",
-  "version": "1.0.0",
+  "name": "Workspace Names & Icons",
+  "version": "1.1.0",
   "author": "Jim Burchel",
   "license": "MIT",
-  "description": "Replaces the bar's workspace numbers in place: each workspace keeps its number and gains a name and icon, edited by double-clicking it",
+  "description": "Name every workspace and give it an icon, right in the bar. Double-click a workspace to edit it and search 10,000 icons by name. The numbers stay, so Super+3 still goes to 3. No config files to edit.",
   "kinds": [
     "bar-widget"
   ],
@@ -13,7 +13,7 @@
     "barWidget": "BarWidget.qml"
   },
   "barWidget": {
-    "displayName": "Workspace Nameplates",
+    "displayName": "Workspace Names & Icons",
     "description": "Workspace number + name + icon — click to switch, double-click to rename and pick an icon, scroll to cycle",
     "category": "Compositor",
     "defaultSection": "left",

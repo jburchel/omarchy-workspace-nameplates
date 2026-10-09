@@ -1,14 +1,18 @@
-# Workspace Nameplates
+# Workspace Names & Icons
 
-An Omarchy bar widget that replaces the stock workspace numbers **in place**.
-Each workspace keeps its number and gains a name and an icon:
+**Know what's on every workspace before you switch to it.**
 
-![Workspace Nameplates in the bar](docs/bar.png)
+An Omarchy bar widget that replaces the stock workspace numbers **in place**. Each workspace
+keeps its number and gains a name and an icon. Double-click one to change it: no config files.
 
-Other workspace plugins add a second widget somewhere else on the bar, or
-swap the number for a name. This one takes over the left-hand slot of
-`omarchy.workspaces` and keeps the number, so `SUPER+3` still goes to the
-workspace labeled 3.
+![Workspace Names & Icons: the stock numbers, then the same bar with names and icons](preview.png)
+
+Other workspace plugins add a second widget somewhere else on the bar, swap the number for a
+name, or show app icons that change every time you open a window. This one takes over the
+stock widget's spot, keeps the number so `SUPER+3` still goes to the workspace labeled 3, and
+shows the names *you* chose, so workspace 2 is always "Code" whatever is open on it.
+
+*(Formerly "Workspace Nameplates". Same plugin, same ID; existing installs keep working.)*
 
 ## Features
 
@@ -123,6 +127,19 @@ if you want to use it. Double-click editing works without a restart.
 ```bash
 node tests/qml-text.test.js   # every Text item renders plain text
 ```
+
+## More Omarchy plugins by Jim Burchel
+
+- **[Meeting Mode](https://github.com/jburchel/omarchy-meeting-mode)**: join any call and your
+  desktop goes quiet by itself (Do Not Disturb, no idle lock, night light off); hang up and it
+  all comes back.
+- **[Jarvis](https://github.com/jburchel/omarchy-jarvis)**: a voice for the AI agent in your
+  terminal. Claude Code, Codex or Gemini CLI read their replies aloud, and "Hey Jarvis" starts
+  hands-free dictation.
+- **[Omarchy Alt-Tab](https://github.com/jburchel/omarchy-alt-tab)**: hold Alt and tap Tab
+  through live previews of your windows, like Windows and macOS.
+
+If your workspaces finally make sense at a glance, a ⭐ on GitHub helps other people find this.
 
 ## Credits
 
