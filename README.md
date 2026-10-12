@@ -12,6 +12,10 @@ name, or show app icons that change every time you open a window. This one takes
 stock widget's spot, keeps the number so `SUPER+3` still goes to the workspace labeled 3, and
 shows the names *you* chose, so workspace 2 is always "Code" whatever is open on it.
 
+Renaming takes a few seconds: open the editor, type a name, search for an icon, press Enter.
+
+![Renaming workspace 4: type "Mail", search "mail", press Enter, and the bar updates](docs/rename.gif)
+
 *(Formerly "Workspace Nameplates". Same plugin, same ID; existing installs keep working.)*
 
 ## Features
